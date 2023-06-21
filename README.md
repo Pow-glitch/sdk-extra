@@ -1,4 +1,4 @@
-# Venomswap SDK Extra
+# ConeDEX SDK Extra
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Actions Status](https://github.com/VenomProtocol/venomswap-sdk-extra/workflows/CI/badge.svg)](https://github.com/VenomProtocol/venomswap-sdk-extra)
@@ -12,13 +12,13 @@ To run the tests, follow these steps. You must have at least node v10 and [yarn]
 First clone the repository:
 
 ```sh
-git clone https://github.com/VenomProtocol/venomswap-sdk-extra.git
+git clone https://github.com/conedex/sdk-extra.git
 ```
 
 Move into the venomswap-sdk-extra working directory
 
 ```sh
-cd venomswap-sdk-extra/
+cd sdk-extra/
 ```
 
 Install dependencies
