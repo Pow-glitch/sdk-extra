@@ -2,8 +2,8 @@
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Actions Status](https://github.com/VenomProtocol/venomswap-sdk-extra/workflows/CI/badge.svg)](https://github.com/VenomProtocol/venomswap-sdk-extra)
-[![npm version](https://img.shields.io/npm/v/@venomswap/sdk-extra/latest.svg)](https://www.npmjs.com/package/@venomswap/sdk-extra/v/latest)
-[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@venomswap/sdk-extra/latest.svg)](https://bundlephobia.com/result?p=@venomswap/sdk-extra@latest)
+[![npm version](https://img.shields.io/npm/v/@conedex/conedex-sdk-extra/latest.svg)](https://www.npmjs.com/package/@conedex/conedex-sdk-extra/v/latest)
+[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@conedex/conedex-sdk-extra/latest.svg)](https://bundlephobia.com/result?p=@conedex/conedex-sdk-extra@latest)
 
 ## Running tests
 

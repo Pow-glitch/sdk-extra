@@ -1,6 +1,6 @@
-import DEFAULT_TOKEN_LIST from '@venomswap/default-token-list'
-import COMMUNITY_TOKEN_LIST from '@venomswap/community-token-list'
-import { ChainId, Token } from '@venomswap/sdk'
+import DEFAULT_TOKEN_LIST from '@conedex/default-token-list'
+import COMMUNITY_TOKEN_LIST from '@conedex/community-token-list'
+import { ChainId, Token } from '@conedex/conedex-sdk'
 
 export interface TokenListToken {
   chainId: number
@@ -15,7 +15,7 @@ export class Tokens {
   chainId?: ChainId
   rawTokens: TokenListToken[]
   tokens?: Token[]
-  
+
   constructor(chainId?: ChainId, tokens = [...DEFAULT_TOKEN_LIST.tokens, ...COMMUNITY_TOKEN_LIST.tokens]) {
     this.chainId = chainId
     this.rawTokens = tokens
@@ -66,7 +66,7 @@ export class Tokens {
 
   public find(key: string, value: string): Token[] | undefined {
     if (this.tokens === undefined) return undefined
-  
+
     switch (key) {
       case 'name':
         return this.tokens.filter((token) => token?.name?.toLowerCase() == value.toLowerCase())
@@ -82,18 +82,18 @@ export class Tokens {
   public first(key: string, value: string): Token | undefined {
     return this.find(key, value)?.[0]
   }
-  
+
   public convertTokens(tokens: TokenListToken[]): Token[] {
     const sdkTokens: Token[] = []
-  
+
     for (const token of tokens) {
       const sdkToken = this.convertToken(token)
       sdkTokens.push(sdkToken)
     }
-  
+
     return sdkTokens
   }
-  
+
   public convertToken(token: TokenListToken): Token {
     return new Token(token.chainId, token.address, token.decimals, token.symbol, token.name)
   }
@@ -107,6 +107,6 @@ export const TOKENS: { [chainId in ChainId]: Tokens } = {
   [ChainId.KOVAN]: new Tokens(ChainId.KOVAN),
   [ChainId.BSC_MAINNET]: new Tokens(ChainId.BSC_MAINNET),
   [ChainId.BSC_TESTNET]: new Tokens(ChainId.BSC_TESTNET),
-  [ChainId.HARMONY_MAINNET]: new Tokens(ChainId.HARMONY_MAINNET),
-  [ChainId.HARMONY_TESTNET]: new Tokens(ChainId.HARMONY_TESTNET),
+  [ChainId.POLYGON_MAINNET]: new Tokens(ChainId.POLYGON_MAINNET),
+  [ChainId.POLYGON_TESTNET]: new Tokens(ChainId.POLYGON_TESTNET),
 }

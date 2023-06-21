@@ -1,8 +1,7 @@
-import { ChainId, Token } from '@venomswap/sdk'
-import { Tokens, TOKENS } from '../src/'
+import { ChainId, Token } from '@conedex/conedex-sdk'
+import { Tokens, TOKENS } from '../src'
 
 describe('Tokens', () => {
-
   describe('Without specifying a chain id', () => {
     it('can correctly parse tokens from token lists', () => {
       const tokens = new Tokens().tokens
@@ -19,7 +18,7 @@ describe('Tokens', () => {
       expect(token?.chainId).toEqual(ChainId.BSC_MAINNET)
       expect(token?.address).toEqual('0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47')
     })
-  
+
     it('can correctly find a token by its symbol', () => {
       const token = new Tokens().firstBySymbol('LINK')
       expect(token).toBeInstanceOf(Token)
@@ -53,7 +52,7 @@ describe('Tokens', () => {
       expect(token?.chainId).toEqual(ChainId.HARMONY_MAINNET)
       expect(token?.address).toEqual('0x58f1b044d8308812881a1433d9Bbeff99975e70C')
     })
-  
+
     it('can correctly find a token by its symbol', () => {
       const token = new Tokens(ChainId.HARMONY_MAINNET).firstBySymbol('LINK')
       expect(token).toBeInstanceOf(Token)
@@ -87,7 +86,7 @@ describe('Tokens', () => {
       expect(token?.chainId).toEqual(ChainId.HARMONY_MAINNET)
       expect(token?.address).toEqual('0x58f1b044d8308812881a1433d9Bbeff99975e70C')
     })
-  
+
     it('can correctly find a token by its symbol', () => {
       const token = TOKENS[ChainId.HARMONY_MAINNET].firstBySymbol('LINK')
       expect(token).toBeInstanceOf(Token)
@@ -104,5 +103,4 @@ describe('Tokens', () => {
       expect(busdTokens).toHaveLength(1)
     })
   })
-
 })
