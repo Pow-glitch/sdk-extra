@@ -195,10 +195,10 @@ export class BlockchainSettings {
           this.explorerURL = 'https://testnet.bscscan.com/'
           break
         case 137:
-          this.explorerURL = 'polygonscan.com/'
+          this.explorerURL = 'https://polygonscan.com/'
           break
         case 80001:
-          this.explorerURL = 'mumbai.polygonscan.com/'
+          this.explorerURL = 'https://mumbai.polygonscan.com/'
           break
         default:
           this.explorerURL = 'https://etherscan.io/'

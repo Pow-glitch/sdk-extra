@@ -1,14 +1,14 @@
 {
   "name": "@conedex/sdk-extra",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "🛠 A specific SDK/toolkit for building applications on top of ConeDEX.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/VenomProtocol/venomswap-sdk-extra.git",
+  "repository": "https://github.com/conedex/sdk-extra",
   "keywords": [
     "ethereum",
     "bsc",
